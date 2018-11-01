@@ -1,6 +1,6 @@
 # VueJS_ClientServer
 
-Vue.js client, WebApi server<br /><br />
+Vue.js client. WebApi server<br /><br />
 
 <b>SERVER:</b><br />
 hosted in IIS as http://vuejswebapiserver.localhost.com/api/employee
