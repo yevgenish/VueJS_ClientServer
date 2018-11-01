@@ -10,6 +10,15 @@ using WebApiServer.Models;
 namespace WebApiServer.Controllers
 {
     //hosted in IIS as http://vuejswebapiserver.localhost.com/api/employee
+    //add to hosts file row: 127.0.0.1 vuejswebapiserver.localhost.com
+    //give permissions for server project folder for
+    //IIS AppPool\DefaultAppPool
+    //IUSR
+
+    //https://www.c-sharpcorner.com/UploadFile/8a67c0/getting-started-with-web-api-step-by-step-with-sample-applic/
+    //Controller Method   Route URI
+    //GetAllEmployees	/api/employee
+    //GetEmployeeDetails	/api/employee/id
 
     //Install-Package Microsoft.AspNet.WebApi.Cors
     //https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api
@@ -41,12 +50,6 @@ namespace WebApiServer.Controllers
                     EmployeeId = 5, EmployeeName = "Ze Povinho", Address = "Lisbon", Department = "Marketing"
                 },
         };
-
-        //https://www.c-sharpcorner.com/UploadFile/8a67c0/getting-started-with-web-api-step-by-step-with-sample-applic/
-
-        //Controller Method   Route URI
-        //GetAllEmployees	/api/employee
-        //GetEmployeeDetails	/api/employee/id
 
         [HttpGet]
         public IEnumerable<Employee> GetEmployees()
