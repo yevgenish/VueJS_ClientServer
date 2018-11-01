@@ -10,7 +10,7 @@ give permissions for server project folder for<br />
 IIS AppPool\DefaultAppPool<br />
 IUSR<br />
 
-<u>Web Api:</u><br />
+Web Api:<br />
 https://www.c-sharpcorner.com/UploadFile/8a67c0/getting-started-with-web-api-step-by-step-with-sample-applic/
 <br />
 Controller Method   Route URI<br />
