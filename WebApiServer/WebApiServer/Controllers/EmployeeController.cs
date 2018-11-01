@@ -15,8 +15,7 @@ namespace WebApiServer.Controllers
     //IIS AppPool\DefaultAppPool
     //IUSR
 
-    //https://www.c-sharpcorner.com/UploadFile/8a67c0/getting-started-with-web-api-step-by-step-with-sample-applic/
-    //Controller Method   Route URI
+    //Controller Method and Route URI
     //GetAllEmployees	/api/employee
     //GetEmployeeDetails	/api/employee/id
 

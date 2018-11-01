@@ -11,9 +11,7 @@ IIS AppPool\DefaultAppPool<br />
 IUSR<br />
 
 Web Api:<br />
-https://www.c-sharpcorner.com/UploadFile/8a67c0/getting-started-with-web-api-step-by-step-with-sample-applic/
-<br />
-Controller Method   Route URI<br />
+Controller Method   and Route URI<br />
 GetAllEmployees	/api/employee<br />
 GetEmployeeDetails	/api/employee/id<br />
 can be tested from index.html in Server project<br />
