@@ -1,5 +1,4 @@
 # VueJS_ClientServer
-VueJS_ClientServer
 
 Vue.js client, WebApi server
 
