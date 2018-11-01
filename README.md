@@ -12,7 +12,7 @@ IUSR<br />
 
 Web Api:<br />
 Controller Method   and Route URI<br />
-GetAllEmployees	/api/employee<br />
+GetEmployees (all)	/api/employee<br />
 GetEmployeeDetails	/api/employee/id<br />
 can be tested from index.html in Server project<br />
 

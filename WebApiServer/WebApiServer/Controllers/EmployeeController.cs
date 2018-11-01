@@ -16,7 +16,7 @@ namespace WebApiServer.Controllers
     //IUSR
 
     //Controller Method and Route URI
-    //GetAllEmployees	/api/employee
+    //GetEmployees (all)	/api/employee
     //GetEmployeeDetails	/api/employee/id
 
     //Under Nuget Package Manager Console Run the following command to install CORS
