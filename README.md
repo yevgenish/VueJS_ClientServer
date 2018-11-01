@@ -3,6 +3,7 @@
 Vue.js client, WebApi server
 
 SERVER:
+
 hosted in IIS as http://vuejswebapiserver.localhost.com/api/employee
 add to hosts file row: 127.0.0.1 vuejswebapiserver.localhost.com
 give permissions for server project folder for
@@ -10,6 +11,7 @@ IIS AppPool\DefaultAppPool
 IUSR
 
 Web Api:
+
 https://www.c-sharpcorner.com/UploadFile/8a67c0/getting-started-with-web-api-step-by-step-with-sample-applic/
 Controller Method   Route URI
 GetAllEmployees	/api/employee
@@ -22,6 +24,7 @@ https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross
 
 
 CLIENT:
+
 created in Visual Studio Code
 to run the project run command in Terminal:
 npm run dev
