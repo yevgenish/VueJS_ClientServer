@@ -20,7 +20,7 @@ namespace WebApiServer.Controllers
     //GetAllEmployees	/api/employee
     //GetEmployeeDetails	/api/employee/id
 
-    //Under Nuget Package Manager Console install the following command to install CORS
+    //Under Nuget Package Manager Console Run the following command to install CORS
     //Install-Package Microsoft.AspNet.WebApi.Cors
     //https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api
 
