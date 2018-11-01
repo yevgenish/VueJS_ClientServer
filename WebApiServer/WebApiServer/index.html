@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="src/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var employeeUrl = 'http://vuejswebapiserver.localhost.com/api/employee';
+            function getEmployees() {
+                $.ajax({
+                    type: "GET",
+                    url: employeeUrl,
+                    success: (data) => {
+                        console.log(data);
+                        $('#result').text(JSON.stringify(data));
+                    }
+                });
+            }
+
+            function putEmployee() {
+                var employee = {
+                    EmployeeName: 'Test User',
+                    Address: 'Home',
+                    Department: 'Freelancer'
+                };
+
+                $.ajax({
+                    type: "PUT",
+                    url: employeeUrl,
+                    data: employee,
+                    success: (data) => {
+                        console.log(data);
+                        $('#result').text(JSON.stringify(data));
+                    },
+                    error: (data, error) => {
+                        $('#result').text(JSON.stringify(data) + ' ' + error);
+                    }
+                });
+            }
+
+            function postEmployee() {
+                var employee = {
+                    EmployeeId: 6,
+                    EmployeeName: 'Test User 2',
+                    Address: 'Home 2',
+                    Department: 'Freelancer 2'
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: employeeUrl,
+                    data: employee,
+                    success: (data) => {
+                        console.log(data);
+                        $('#result').text(JSON.stringify(data));
+                    },
+                    error: (data, error) => {
+                        $('#result').text(JSON.stringify(data) + ' ' + error);
+                    }
+                });
+            }
+
+            function deleteEmployee() {
+                var employee = {
+                    EmployeeId: 6
+                };
+
+                $.ajax({
+                    type: "DELETE",
+                    url: employeeUrl + '/' + employee.EmployeeId,
+                    success: (data) => {
+                        console.log(data);
+                        $('#result').text(JSON.stringify(data));
+                    },
+                    error: (data, error) => {
+                        $('#result').text(JSON.stringify(data) + ' ' + error);
+                    }
+                });
+            }
+
+            $('#aEmployeeUrl').text(employeeUrl).attr('href', employeeUrl);
+
+            $('#btnGetEmployees').on('click', function () {
+                getEmployees();
+            });
+
+            $('#btnPutEmployee').on('click', function () {
+                putEmployee();
+            });
+
+            $('#btnPostEmployee').on('click', function () {
+                postEmployee();
+            });
+
+            $('#btnDeleteEmployee').on('click', function () {
+                deleteEmployee();
+            });
+        });
+
+        
+    </script>
+</head>
+<body>
+    <input type="button" value="Get Employees" id="btnGetEmployees" />
+    <br />
+    <input type="button" value="Put Employee" id="btnPutEmployee" />
+    <br />
+    <input type="button" value="Post Employee" id="btnPostEmployee" />
+    <br />
+    <input type="button" value="Delete Employee" id="btnDeleteEmployee" />
+    <p>
+        <a href="#" target="_blank" id="aEmployeeUrl"></a>
+    </p>
+    Result:
+    <p>
+        <div id="result"></div>
+    </p>
+</body>
+</html>
