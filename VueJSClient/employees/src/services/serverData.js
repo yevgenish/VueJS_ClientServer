@@ -1,8 +1,9 @@
 import Vue from 'vue';
 
-var url = 'http://vuejswebapiserver.localhost.com/api/employee';
+var employeeApiVersion = 'v1';
+var url = 'http://vuejswebapiserver.localhost.com/api/' + employeeApiVersion + '/employee/';
 
-function getEmployees(){    
+function getEmployees(){
     return new Promise((resolve, reject) => {
             Vue.http.get(url).then((response) => {
             //var result = response.data;

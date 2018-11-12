@@ -24,6 +24,7 @@ namespace WebApiServer.Controllers
     //https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api
 
     //[EnableCors(origins: "http://mywebclient.azurewebsites.net", headers: "*", methods: "*")]
+    [RoutePrefix("api/v1/Employee")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class EmployeeController : ApiController
     {
@@ -52,6 +53,7 @@ namespace WebApiServer.Controllers
         };
 
         [HttpGet]
+        [Route("")]
         public IEnumerable<Employee> GetEmployees()
         {
             try
@@ -66,6 +68,7 @@ namespace WebApiServer.Controllers
         }
 
         [HttpGet]
+        [Route("{id:int}")]
         public Employee GetEmployeeDetails(int id)
         {
             try
@@ -86,6 +89,7 @@ namespace WebApiServer.Controllers
         }
 
         [HttpPut]
+        [Route("")]
         public HttpResponseMessage PutEmployee([FromBody]Employee employee)
         {
             try
@@ -107,6 +111,7 @@ namespace WebApiServer.Controllers
         }
 
         [HttpPost]
+        [Route("")]
         public HttpResponseMessage PostEmployee([FromBody]Employee employee)
         {
             try
@@ -139,6 +144,7 @@ namespace WebApiServer.Controllers
         }
 
         [HttpDelete]
+        [Route("{id:int}")]
         public HttpResponseMessage DeleteEmployee(int id)
         {
             try

@@ -5,8 +5,17 @@
     <title></title>
     <script src="src/jquery-3.3.1.js"></script>
     <script type="text/javascript">
+
         $(function () {
-            var employeeUrl = 'http://vuejswebapiserver.localhost.com/api/employee';
+            var hostUrl = 'http://vuejswebapiserver.localhost.com'
+            var employeeApiVersion = "v1";
+            var employeeUrl = hostUrl + '/api/' + employeeApiVersion + '/employee/';            
+
+            function setSwaggerUrl() {
+                var swaggerUrl = hostUrl + '/swagger';
+                $('#aSwagger').attr('href', swaggerUrl).text(swaggerUrl);
+            }
+
             function getEmployees() {
                 $.ajax({
                     type: "GET",
@@ -96,12 +105,18 @@
             $('#btnDeleteEmployee').on('click', function () {
                 deleteEmployee();
             });
+
+            setSwaggerUrl();
         });
 
         
     </script>
 </head>
 <body>
+    <p>
+        Swagger Url - Web API Description: <a href="#" target="_blank" id="aSwagger">url</a>
+    </p>
+
     <input type="button" value="Get Employees" id="btnGetEmployees" />
     <br />
     <input type="button" value="Put Employee" id="btnPutEmployee" />
