@@ -22,7 +22,7 @@ https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross
 <br /><br />
 
 To install <b>Swagger</b>, to explore WebApi services, run the following command:<br />
-Install-Package Swashbuckle
+Install-Package Swashbuckle<br />
 Swagger url:<br />
 http://vuejswebapiserver.localhost.com/swagger
 <br /><br />
