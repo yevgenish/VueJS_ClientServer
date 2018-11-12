@@ -21,7 +21,7 @@ Install-Package Microsoft.AspNet.WebApi.Cors<br />
 https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api
 <br /><br />
 
-To install Swagger, to explore WebApi services, run the following command:<br />
+To install <b>Swagger</b>, to explore WebApi services, run the following command:<br />
 Install-Package Swashbuckle
 Swagger url:<br />
 http://vuejswebapiserver.localhost.com/swagger
